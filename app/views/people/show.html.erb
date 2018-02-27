@@ -1,0 +1,9 @@
+<%= render 'layouts/header' %>
+<h1><%= @person.full_name %></h1>
+<p>First name: <%= @person.first_name %></p>
+<p>Last name: <%= @person.last_name %></p>
+<p>Age: <%= @person.age %></p>
+<p>Hair: <%= @person.hair_color %></p>
+<p>Eyes: <%= @person.eye_color %></p>
+<p>Alive? <%= @person.alive %></p>
+<%= link_to 'Back', people_path %>

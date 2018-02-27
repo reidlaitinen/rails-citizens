@@ -1,0 +1,24 @@
+<%= render 'layouts/header' %>
+<h1>All The People:</h1>
+    <% @people.each do |person| %>
+      <div class='person-card'>
+        <div class='person-info'>
+          <h3>Full Name: <%= person.full_name %></h3>
+          <h4>Hair Color: <%= person.hair_color %></h4>
+          <h4>Eye Color: <%= person.eye_color %></h4>
+          <h4>Gender: <%= person.gender %></h4>
+          <h4>Alive: <%= person.alive %></h4>
+        </div>
+        <div class='person-card-links'>
+          <div class='person-card-link'>
+            <%= link_to 'DETAILS', person_path(person), { :class => 'person-link' } %>
+          </div>
+          <div class='person-card-link'>
+            <%= link_to 'EDIT', edit_person_path(person), { :class => 'person-link' } %>
+          </div>
+          <div class='person-card-link'>
+            <%= link_to 'DELETE', person_path(person), method: :delete, class: 'person-link' %>
+          </div>
+        </div>
+      </div>
+    <% end %>

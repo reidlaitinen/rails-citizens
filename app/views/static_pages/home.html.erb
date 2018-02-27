@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Citizens</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class='home-header'>
+      <h1>CITIZENS</h1>
+    </div>
+    <div class='home-sub-header'>
+      <h2><%= link_to 'click here to enter', people_path %></h2>
+    </div>
+  </body>
+</html>
